@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #eef8f1;
+    color: #1f3d2b;
+}
+
+.page-container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.top-bar {
+    background: linear-gradient(135deg, #0b7a3b, #19a85a);
+    color: white;
+    padding: 28px 32px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 22px rgba(11, 122, 59, 0.25);
+}
+
+.top-bar h1 {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.top-bar p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.back-btn {
+    background: white;
+    color: #0b7a3b;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.form-card,
+.table-card {
+    background: white;
+    margin-top: 28px;
+    padding: 26px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2,
+.table-card h2 {
+    color: #0b7a3b;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.main-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    gap: 14px;
+}
+
+.main-form input {
+    height: 47px;
+    padding: 0 14px;
+    border: 1px solid #c4e2cf;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    color: #1f3d2b;
+}
+
+.main-form input:focus,
+td input:focus {
+    border-color: #0b7a3b;
+    box-shadow: 0 0 0 3px rgba(11, 122, 59, 0.12);
+}
+
+.add-btn {
+    height: 47px;
+    background: #0b7a3b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #08642f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #0b7a3b;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-size: 15px;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid #e0efe6;
+    font-size: 15px;
+    color: #284b37;
+}
+
+tbody tr:hover {
+    background: #f4fbf7;
+}
+
+td input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #c4e2cf;
+    border-radius: 8px;
+    outline: none;
+}
+
+.action-box {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.edit-btn,
+.update-btn,
+.cancel-btn,
+.delete-btn {
+    padding: 9px 13px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #dff5e8;
+    color: #0b7a3b;
+}
+
+.update-btn {
+    background: #0b7a3b;
+    color: white;
+}
+
+.cancel-btn {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.empty-text {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+@media (max-width: 900px) {
+    .main-form {
+        grid-template-columns: 1fr;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .table-card {
+        overflow-x: auto;
+    }
+}

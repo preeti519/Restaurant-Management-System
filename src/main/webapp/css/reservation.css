@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #eef8f1;
+    color: #1f3d2b;
+}
+
+.page-container {
+    width: 92%;
+    margin: 30px auto;
+}
+
+.top-bar {
+    background: linear-gradient(135deg, #0f7a3b, #20a45b);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(15, 122, 59, 0.25);
+}
+
+.top-bar h1 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.top-bar p {
+    font-size: 15px;
+    opacity: 0.95;
+}
+
+.back-btn {
+    background: white;
+    color: #0f7a3b;
+    padding: 11px 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #dff5e8;
+}
+
+.form-card,
+.table-card {
+    background: white;
+    margin-top: 28px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2,
+.table-card h2 {
+    color: #0f7a3b;
+    margin-bottom: 18px;
+}
+
+.main-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #b9d8c2;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #0f7a3b;
+    box-shadow: 0 0 0 3px rgba(15, 122, 59, 0.12);
+}
+
+.add-btn {
+    background: #0f7a3b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #0b5f2d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+thead {
+    background: #0f7a3b;
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e3eee6;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f4fbf6;
+}
+
+td input {
+    width: 100%;
+    padding: 9px;
+}
+
+.action-box {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.edit-btn,
+.update-btn,
+.cancel-btn,
+.delete-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #dff5e8;
+    color: #0f7a3b;
+}
+
+.update-btn {
+    background: #0f7a3b;
+    color: white;
+}
+
+.cancel-btn {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.empty-text {
+    text-align: center;
+    color: #777;
+    padding: 25px;
+}
+
+@media (max-width: 1000px) {
+    .main-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 650px) {
+    .main-form {
+        grid-template-columns: 1fr;
+    }
+
+    .table-card {
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body {
+    background: #eef8f1;
+    color: #173f31;
+}
+
+.dashboard-container {
+    min-height: 100vh;
+}
+
+/* Topbar */
+.topbar {
+    background: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 80, 45, 0.08);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #0f6b43;
+}
+
+.brand i {
+    background: #0f6b43;
+    color: white;
+    padding: 12px;
+    border-radius: 14px;
+    font-size: 22px;
+}
+
+.brand h2 {
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #245344;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    background: #e4f5eb;
+    color: #0f6b43;
+}
+
+.logout {
+    background: #0f6b43;
+    color: white !important;
+}
+
+/* Hero */
+.hero {
+    margin: 40px 7%;
+    padding: 50px;
+    background: linear-gradient(135deg, #0f6b43, #1c9b63);
+    border-radius: 32px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 35px;
+    align-items: center;
+    box-shadow: 0 20px 45px rgba(15, 107, 67, 0.25);
+}
+
+.small-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.hero h1 {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 14px;
+    font-weight: bold;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+.btn-light {
+    background: white;
+    color: #0f6b43;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+.hero-box {
+    background: rgba(255, 255, 255, 0.18);
+    padding: 35px;
+    border-radius: 26px;
+    text-align: center;
+}
+
+.hero-box i {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-box h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* Stats */
+.stats-section {
+    margin: 20px 7%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.stat-card {
+    background: white;
+    padding: 28px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(0, 80, 45, 0.08);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+}
+
+.stat-card i {
+    font-size: 32px;
+    color: #0f6b43;
+    margin-bottom: 12px;
+}
+
+.stat-card h3 {
+    font-size: 34px;
+    color: #173f31;
+}
+
+.stat-card p {
+    color: #60756b;
+    margin-top: 6px;
+}
+
+/* Features */
+.features-section {
+    margin: 50px 7%;
+}
+
+.features-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    background: white;
+    text-decoration: none;
+    color: #173f31;
+    padding: 30px;
+    border-radius: 26px;
+    box-shadow: 0 12px 28px rgba(0, 80, 45, 0.08);
+    border: 1px solid #e3f2e9;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    background: #f1fbf5;
+    transform: translateY(-8px);
+}
+
+.feature-card i {
+    width: 58px;
+    height: 58px;
+    background: #e4f5eb;
+    color: #0f6b43;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #60756b;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    .topbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 35px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .stats-section,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+}
